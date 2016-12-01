@@ -1,7 +1,7 @@
 // imports
 
 // decorator
-export class HighlightDirective {
+export class ZoomTextDirective {
     // isZoomEnabled property
 
     // constructor implementation
