@@ -1,0 +1,22 @@
+<div>
+    <label>
+        <input [(ngModel)]="showInternalComponent" type="checkbox" />
+        Show internal component
+    </label>
+</div>
+<div>
+    <label>
+        Value passed into internal component:
+    </label>
+    <input type="number" [(ngModel)]="numberValue" />
+</div>
+<div class='internal-content-wrapper'>
+    <my-lifecycle-hooks-internal 
+        *ngIf="showInternalComponent" 
+        [passParameter]="numberValue"
+        (lifecycleHooksEvent)="addEvent($event)">
+    </my-lifecycle-hooks-internal>
+</div>
+<div *ngFor="let lifecycleEvent of lifecycleEvents">
+    {{lifecycleEvent}}
+</div>

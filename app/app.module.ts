@@ -16,6 +16,7 @@ import { ViewChildExampleModule } from './viewChildExample/viewChildExample.modu
 import { PipeExampleModule } from './pipeExample/pipeExample.module';
 import { DirectiveExampleModule } from './directiveExample/directiveExample.module';
 import { HttpExampleModule } from './httpExample/httpExample.module';
+import { LifecycleHooksExampleModule } from './lifecycleHooksExample/lifecycleHooksExample.module';
 
 @NgModule({
     imports: [ 
@@ -28,7 +29,8 @@ import { HttpExampleModule } from './httpExample/httpExample.module';
         ViewChildExampleModule,
         PipeExampleModule,
         DirectiveExampleModule,
-        HttpExampleModule
+        HttpExampleModule,
+        LifecycleHooksExampleModule
     ],
     declarations: [ AppComponent ],
     bootstrap: [ AppComponent ],
