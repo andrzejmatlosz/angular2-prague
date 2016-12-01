@@ -9,6 +9,8 @@ export class DirectiveExampleComponent {
 
     public isZoomEnabled: boolean= false;
 
+    public ifCondition: boolean= false;
+
     public condition1: boolean= false;
     public condition2: boolean= false;
     public condition3: boolean= false;
