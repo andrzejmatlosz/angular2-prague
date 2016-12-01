@@ -1,4 +1,5 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, DoCheck } from '@angular/core';
+import { Router } from '@angular/router';
 import { SharedDataService } from './../shared/sharedData.service';
 
 @Component({
@@ -6,18 +7,15 @@ import { SharedDataService } from './../shared/sharedData.service';
     templateUrl: 'app/menu/menu.component.html',
     styleUrls: [ 'app/menu/menu.component.css' ]
 })
-export class MenuComponent {
-    selectedView: string;
+export class MenuComponent implements DoCheck {
+    showAddToSharedDataBtn: boolean = false;
 
-    @Output() viewChanged: EventEmitter<string>;
-
-    constructor(private sharedDataService: SharedDataService) {
-        this.viewChanged = new EventEmitter<string>();
+    constructor(private sharedDataService: SharedDataService,
+        private router: Router) {
     }
 
-    changeView(selectedView) {
-        this.viewChanged.emit(selectedView);
-        this.selectedView = selectedView;
+    ngDoCheck() {
+        this.showAddToSharedDataBtn = this.router.url === '/sharedData';
     }
 
     addValueToSharedData() {

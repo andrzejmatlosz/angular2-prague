@@ -1,12 +1,5 @@
 <my-title [userName]="userNameFromAppComponent"></my-title>
 <my-menu (viewChanged)="changeView($event)"></my-menu>
 <div class="app-content">
-    <my-details *ngIf="selectedView === 'details'"></my-details>
-    <my-dashboard *ngIf="selectedView === 'dashboard'"></my-dashboard>
-    <my-shared-data-example *ngIf="selectedView === 'sharedDataExample'"></my-shared-data-example>
-    <my-view-child-example-parent *ngIf="selectedView === 'viewChildExample'"></my-view-child-example-parent>
-    <my-pipe-example *ngIf="selectedView === 'pipeExample'"></my-pipe-example>
-    <my-directive-example *ngIf="selectedView === 'directiveExample'"></my-directive-example>
-    <my-http-example *ngIf="selectedView === 'httpExample'"></my-http-example>
-    <my-lifecycle-hooks-example *ngIf="selectedView === 'lifecycleHooksExample'"></my-lifecycle-hooks-example>
+    <router-outlet></router-outlet>
 </div>

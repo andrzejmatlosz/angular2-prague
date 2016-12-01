@@ -18,6 +18,8 @@ import { DirectiveExampleModule } from './directiveExample/directiveExample.modu
 import { HttpExampleModule } from './httpExample/httpExample.module';
 import { LifecycleHooksExampleModule } from './lifecycleHooksExample/lifecycleHooksExample.module';
 
+import { AppRoutingModule } from './app-routing.module';
+
 @NgModule({
     imports: [ 
         BrowserModule, 
@@ -30,7 +32,8 @@ import { LifecycleHooksExampleModule } from './lifecycleHooksExample/lifecycleHo
         PipeExampleModule,
         DirectiveExampleModule,
         HttpExampleModule,
-        LifecycleHooksExampleModule
+        LifecycleHooksExampleModule,
+        AppRoutingModule
     ],
     declarations: [ AppComponent ],
     bootstrap: [ AppComponent ],
