@@ -4,3 +4,15 @@
         <span>{{person.firstname}} {{person.lastname}}</span>
     </div>
 </div>
+<div class='example-area'>
+    Persons with use async pipe:
+    <div *ngFor="let person of personsObservable | async">
+        <span>{{person.firstname}} {{person.lastname}}</span>
+    </div>
+</div>
+<div class='example-area'>
+    Persons retrived by using promise:
+    <div *ngFor="let person of personsPromise">
+        <span>{{person.firstname}} {{person.lastname}}</span>
+    </div>
+</div>
