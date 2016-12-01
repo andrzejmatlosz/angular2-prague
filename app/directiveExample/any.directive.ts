@@ -1,8 +1,20 @@
-// imports
+import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
-// decorator
+@Directive({ selector: '[myAny]' })
 export class AnyDirective {
-    // constructor implementation
+    constructor(
+        private templateRef: TemplateRef<any>,
+        private viewContainer: ViewContainerRef
+    ) { 
 
-    // input conditions array implementation
+    }
+
+    @Input() set myAny(conditionsArray: Array<boolean>) {
+        if (conditionsArray.filter(condition => condition).length > 0) {
+            this.viewContainer.clear();
+            this.viewContainer.createEmbeddedView(this.templateRef);
+        } else {
+            this.viewContainer.clear();
+        }
+    }
 }

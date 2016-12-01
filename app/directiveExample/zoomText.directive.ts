@@ -1,10 +1,21 @@
-// imports
+import { Directive, ElementRef, HostListener, Input, Renderer } from '@angular/core';
 
-// decorator
+@Directive({
+  selector: '[myZoomText]'
+})
 export class ZoomTextDirective {
-    // isZoomEnabled property
+    @Input() myZoomText : boolean;
 
-    // constructor implementation
+    constructor(private el: ElementRef, private renderer: Renderer) { }
 
-    // listeners implementation
+    private previousFontSize = this.el.nativeElement.style.fontSize; 
+
+    @HostListener('mouseenter') onMouseEnter() {
+        this.previousFontSize = window.getComputedStyle(this.el.nativeElement, null).getPropertyValue('font-size'); 
+        this.renderer.setElementStyle(this.el.nativeElement, 'font-size', '20px');
+    }
+
+    @HostListener('mouseleave') onMouseLeave() {
+        this.renderer.setElementStyle(this.el.nativeElement, 'font-size', this.previousFontSize);
+    }
 }

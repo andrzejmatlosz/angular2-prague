@@ -15,6 +15,7 @@ import { SharedDataExampleModule } from './sharedDataExample/sharedDataExample.m
 import { ViewChildExampleModule } from './viewChildExample/viewChildExample.module';
 import { PipeExampleModule } from './pipeExample/pipeExample.module';
 import { DirectiveExampleModule } from './directiveExample/directiveExample.module';
+import { HttpExampleModule } from './httpExample/httpExample.module';
 
 @NgModule({
     imports: [ 
@@ -26,7 +27,8 @@ import { DirectiveExampleModule } from './directiveExample/directiveExample.modu
         SharedDataExampleModule,
         ViewChildExampleModule,
         PipeExampleModule,
-        DirectiveExampleModule
+        DirectiveExampleModule,
+        HttpExampleModule
     ],
     declarations: [ AppComponent ],
     bootstrap: [ AppComponent ],
