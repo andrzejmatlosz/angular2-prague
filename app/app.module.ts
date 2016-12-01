@@ -12,7 +12,8 @@ import { MenuModule } from './menu/menu.module';
 import { DetailsModule } from './details/details.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { SharedDataExampleModule } from './sharedDataExample/sharedDataExample.module';
-import { ViewChildExampleModel } from './viewChildExample/viewChildExample.module';
+import { ViewChildExampleModule } from './viewChildExample/viewChildExample.module';
+import { PipeExampleModule } from './pipeExample/pipeExample.module';
 
 @NgModule({
     imports: [ 
@@ -22,7 +23,8 @@ import { ViewChildExampleModel } from './viewChildExample/viewChildExample.modul
         DetailsModule,
         DashboardModule,
         SharedDataExampleModule,
-        ViewChildExampleModel
+        ViewChildExampleModule,
+        PipeExampleModule
     ],
     declarations: [ AppComponent ],
     bootstrap: [ AppComponent ],

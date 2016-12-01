@@ -7,4 +7,4 @@ import { ViewChildExampleChildComponent }   from './viewChildExampleChild/viewCh
     exports: [ ViewChildExampleParentComponent ],
     declarations: [ ViewChildExampleParentComponent, ViewChildExampleChildComponent ]
 })
-export class ViewChildExampleModel { }
+export class ViewChildExampleModule { }

@@ -1,0 +1,46 @@
+<div>
+    Date without format:
+    {{ sampleDate | date }}
+</div>
+<div>
+    Date with default format:
+    {{ sampleDate | date }}
+</div>
+<div>
+    Date with format dd-MM-yyyy:
+    {{ sampleDate | date:"dd-MM-yyyy" }}
+</div>
+<div class="one-example">
+    Date with dynamic format
+    <input [(ngModel)]="dynamicFormat" />
+    <button (click)="useDynamicFormat()">Use format</button>
+    <div>
+        Date with dynamic format (with upperCase): {{ sampleDate | date : usedFormat | uppercase }}
+    </div>
+</div>
+<!--<div class="one-example">
+    <select [(ngModel)]="city">
+        <option selected>Poznań</option>
+        <option>Warszawa</option>
+    </select>
+    <input [(ngModel)]="name" />
+    <div>
+        <button (click)="addTeamMember('Red')">Add red</button>
+        <button (click)="addTeamMember('Green')">Add green</button>
+        <button (click)="addTeamMember('Blue')">Add blue</button>
+    </div>
+    <div>
+        All team members:
+        <div *ngFor="let teamMember of teamMembers">
+            <span>{{teamMember.name}}</span>
+            <span>{{teamMember.city}}</span>
+            <span>{{teamMember.teamColor}}</span>
+        </div>
+    </div>
+    <div>
+        All green members:
+    </div>
+    <div>
+        All red members from Warszawa:
+    </div>
+</div>-->
