@@ -18,7 +18,7 @@
         Date with dynamic format (with upperCase): {{ sampleDate | date : usedFormat | uppercase }}
     </div>
 </div>
-<!--<div class="one-example">
+<div class="one-example">
     <select [(ngModel)]="city">
         <option selected>Poznań</option>
         <option>Warszawa</option>
@@ -39,8 +39,18 @@
     </div>
     <div>
         All green members:
+        <div *ngFor="let teamMember of teamMembers | teamMembersFilter:'Green' ">
+            <span>{{teamMember.name}}</span>
+            <span>{{teamMember.city}}</span>
+            <span>{{teamMember.teamColor}}</span>
+        </div>
     </div>
     <div>
         All red members from Warszawa:
+        <div *ngFor="let teamMember of teamMembers | teamMembersFilter:'Red':'Warszawa' ">
+            <span>{{teamMember.name}}</span>
+            <span>{{teamMember.city}}</span>
+            <span>{{teamMember.teamColor}}</span>
+        </div>
     </div>
-</div>-->
+</div>

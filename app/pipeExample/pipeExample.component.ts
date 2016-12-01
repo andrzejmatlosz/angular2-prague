@@ -16,15 +16,15 @@ export class PipeExampleComponent {
     }
 
 
-    // public city: string = 'Poznań';
-    // public name: string;
-    // public teamMembers: Array<TeamMember> = [];
+    public city: string = 'Poznań';
+    public name: string;
+    public teamMembers: Array<TeamMember> = [];
     
-    // addTeamMember(color: TeamColor) {
-    //     this.teamMembers.push({
-    //         name: this.name,
-    //         city: this.city,
-    //         teamColor: color
-    //     });
-    // }
+    addTeamMember(color: TeamColor) {
+        this.teamMembers.push({
+            name: this.name,
+            city: this.city,
+            teamColor: color
+        });
+    }
 }

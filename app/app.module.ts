@@ -14,6 +14,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { SharedDataExampleModule } from './sharedDataExample/sharedDataExample.module';
 import { ViewChildExampleModule } from './viewChildExample/viewChildExample.module';
 import { PipeExampleModule } from './pipeExample/pipeExample.module';
+import { DirectiveExampleModule } from './directiveExample/directiveExample.module';
 
 @NgModule({
     imports: [ 
@@ -24,7 +25,8 @@ import { PipeExampleModule } from './pipeExample/pipeExample.module';
         DashboardModule,
         SharedDataExampleModule,
         ViewChildExampleModule,
-        PipeExampleModule
+        PipeExampleModule,
+        DirectiveExampleModule
     ],
     declarations: [ AppComponent ],
     bootstrap: [ AppComponent ],
