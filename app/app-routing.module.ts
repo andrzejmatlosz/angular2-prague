@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, Router } from '@angular/router';
 
 import { DetailsContainerComponent } from './details/detailsContainer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -19,7 +19,6 @@ const appRoutes: Routes = [
   { path: 'directive', component: DirectiveExampleComponent },
   { path: 'http', component: HttpExampleComponent },
   { path: 'lifecycleHooks', component: LifecycleHooksExampleComponent }
-  
 ];
 
 @NgModule({
@@ -28,6 +27,7 @@ const appRoutes: Routes = [
   ],
   exports: [
     RouterModule
-  ]
+  ],
+//   providers: [ Router ]
 })
 export class AppRoutingModule {}

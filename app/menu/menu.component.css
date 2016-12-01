@@ -3,7 +3,13 @@
     padding: 15px 20px;
 }
 
+a.menu-btn {
+    padding-top: 5px;
+}
+
 .menu-btn {
+    display: inline-block;
+    text-align: center;
     width: 100px;
     height: 40px;
     border: 1px solid white;
@@ -14,6 +20,10 @@
     vertical-align: top;
     cursor: pointer;
     outline: none;
+}
+
+.menu-btn.active {
+    background: green;
 }
 
 .shared-data-example-btn {
