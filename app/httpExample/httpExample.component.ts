@@ -7,4 +7,6 @@ import { IPerson } from './person.model';
 })
 export class HttpExampleComponent {
     public persons: Array<IPerson>;
+
+    // implementation of constructor with inject services to retrieve data
 }
