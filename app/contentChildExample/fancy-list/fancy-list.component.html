@@ -1,0 +1,6 @@
+<div>
+    <h3>Below you will find all items from list</h3>
+    <div *ngFor="let item of items">
+        <template [ngTemplateOutlet]="template" [ngOutletContext]="{item: item}"></template>
+    </div>
+</div>

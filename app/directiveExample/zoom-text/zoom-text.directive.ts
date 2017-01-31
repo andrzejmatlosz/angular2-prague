@@ -12,7 +12,8 @@ export class ZoomTextDirective {
 
     @HostListener('mouseenter') onMouseEnter() {
         if (this.myZoomText) {
-            this.previousFontSize = window.getComputedStyle(this.el.nativeElement, null).getPropertyValue('font-size'); 
+            this.previousFontSize = window.getComputedStyle(
+                this.el.nativeElement, null).getPropertyValue('font-size'); 
             this.renderer.setElementStyle(this.el.nativeElement, 'font-size', '20px');
         }
     }

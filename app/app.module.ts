@@ -4,15 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-import { UserService } from './shared/user.service';
-import { SharedDataService } from './shared/sharedData.service';
-
-import { TitleModule } from './title/title.module';
 import { MenuModule } from './menu/menu.module';
-import { DetailsModule } from './details/details.module';
-import { DashboardModule } from './dashboard/dashboard.module';
-import { SharedDataExampleModule } from './sharedDataExample/sharedDataExample.module';
 import { ViewChildExampleModule } from './viewChildExample/viewChildExample.module';
+import { ContentChildExampleModule } from './contentChildExample/contentChildExample.module';
 import { PipeExampleModule } from './pipeExample/pipeExample.module';
 import { DirectiveExampleModule } from './directiveExample/directiveExample.module';
 import { HttpExampleModule } from './httpExample/httpExample.module';
@@ -23,12 +17,9 @@ import { AppRoutingModule } from './app-routing.module';
 @NgModule({
     imports: [ 
         BrowserModule, 
-        TitleModule,
         MenuModule,
-        DetailsModule,
-        DashboardModule,
-        SharedDataExampleModule,
         ViewChildExampleModule,
+        ContentChildExampleModule,
         PipeExampleModule,
         DirectiveExampleModule,
         HttpExampleModule,
@@ -36,7 +27,6 @@ import { AppRoutingModule } from './app-routing.module';
         AppRoutingModule
     ],
     declarations: [ AppComponent ],
-    bootstrap: [ AppComponent ],
-    providers: [ UserService, SharedDataService ]
+    bootstrap: [ AppComponent ]
 })
 export class AppModule { }

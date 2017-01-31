@@ -1,0 +1,17 @@
+<div>
+    Content child example
+    <div class="example-area">
+        <my-fancy-container>
+            <div>
+                Some content available as Content Child
+            </div>
+        </my-fancy-container>
+    </div>
+    <div class="example-area">
+        <input type="text" [(ngModel)]="text" />
+        <button (click)="addText()">Add Item</button>
+        <my-fancy-list [items]="items">
+            <template let-item="item">(This prefix cames from dynamic template) {{ item }}</template>
+        </my-fancy-list>
+    </div>
+</div>

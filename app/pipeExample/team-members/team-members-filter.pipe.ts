@@ -5,7 +5,7 @@ import { TeamMember, TeamColor } from './teamMember.model';
     name: 'teamMembersFilter',
     pure: false
 })
-export class TeamMembersFilter implements PipeTransform {
+export class TeamMembersFilterPipe implements PipeTransform {
     transform(teamMembers: Array<TeamMember>, color: TeamColor, city: string) {
         return teamMembers.filter(teamMember => {
             if (color && city) {
